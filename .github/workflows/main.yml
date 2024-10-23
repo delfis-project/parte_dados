@@ -83,6 +83,3 @@ jobs:
             ssh -o StrictHostKeyChecking=no -i private_key ubuntu@ec2-54-172-214-79.compute-1.amazonaws.com "
 
                 cd parte_dados/subindinho/;git pull;./iniciarApp.sh"
- 
-
-'''
