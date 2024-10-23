@@ -40,7 +40,7 @@ jobs:
             echo "Conectando no EC2"
             echo "${{secrets.AWS_KEY}}" > private_key && chmod 600 private_key 
 
-            ssh -o StrictHostKeyChecking=no -i private_key ubuntu@ec2-54-162-95-166.compute-1.amazonaws.com "
+            ssh -o StrictHostKeyChecking=no -i private_key ubuntu@ec2-34-232-168-144.compute-1.amazonaws.com "
                 cd parte_dados/ai_forms/ && 
                 git pull && 
                 ./iniciarApp.sh "
