@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulário de Pesquisa</title>
+        <!-- Link para a fonte Montserrat -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <!-- Referenciando o CSS usando url_for -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    
+<body>
+    <div class="container">
+        <h1>Formulário de Pesquisa</h1>
+        <form method="POST">
+            <label for="faixa_etaria">Qual a sua faixa etária?</label>
+            <select name="faixa_etaria" id="faixa_etaria" required>
+                <option value="Menos de 18"> Menos de 18</option>
+                <option value="18-29">18-29</option>
+                <option value="30-39">30-39</option>
+                <option value="40-49">40-49</option>
+                <option value="50-59">50-60</option>
+                <option value="61 ou mais">61 ou mais</option>
+            </select>
+
+            <label for="estado">Em qual estado você mora?</label>
+            <select name="estado" id="estado" required>
+                <option value="São Paulo"> São Paulo</option>
+                <option value="Minas Gerais">Minas Gerais</option>
+                <option value="Outro">Outro</option>
+            </select>
+
+            <label for="renda">Qual sua faixa de renda familiar?</label>
+            <select name="renda" id="renda" required>
+                <option value="R$ 0 a R$ 2000"> R$ 0 a R$ 2000</option>
+                <option value="R$ 2001 a R$ 5000">R$ 2001 a R$ 5000</option>
+                <option value="R$ 5001 a R$ 10000">R$ 5001 a R$ 10000</option>
+                <option value="Mais de R$ 10000"> Mais de R$ 10000</optidon>
+            </select>
+            <label for="familiaridade">Qual é o seu nível de familiaridade com o uso de aplicativos em dispositivos móveis?</label>
+            <select name="familiaridade" id="familiaridade" required>
+                <option value="Pouco familiarizado">Pouco familiarizado</option>
+                <option value="Moderadamente familiarizado">Moderadamente familiarizado</option>
+                <option value="Muito familiarizado">Muito familiarizado</option>
+            </select>
+
+            <label for="tempo_celular">Em média, quanto tempo você usa o celular diariamente?</label>
+            <select name="tempo_celular" id="tempo_celular" required>
+                <option value="Menos de 1 hora">Menos de 1 hora</option>
+                <option value="2 Horas">2 Horas</option>
+                <option value="3 Horas">3 Horas</option>
+                <option value="4 Horas">4 Horas</option>
+                <option value="Mais de 5 horas">Mais de 5 horas</option>
+
+            </select>
+            <label for="interesse_jogos">Você se interessaria em jogar palavra cruzada, sudoku ou jogos similares a esses diariamente?</label>
+            <select name="interesse_jogos" id="interesse_jogos" required>
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+</body>
+</html>
